@@ -1,0 +1,155 @@
+/* * Colors Variables * */
+:root {
+    --primary-color: #00A8B5;
+    --basic: #212529;
+    --orange: #F7912C;
+    --green: #0FDC67;
+    --red: #D20013;
+    --light-grey: #999A9D;
+    --dark-grey: #666666;
+    --white: #FFFFFF;
+    --bg-color:#f7f7f7;
+    --hover-color: #0DE3F41A;
+}
+
+
+body {
+font-family: 'Inter', sans-serif;
+background-color: var(--bg-color);
+}
+
+
+/** Side bar **/
+
+.sidebar {
+width: 220px;
+background-color: var(--white);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.sidebar .nav-item {
+padding: 12px;
+cursor: pointer;
+color: var(--light-grey);
+border-radius: 8px;
+}
+
+.sidebar .nav-item.active,
+.sidebar .nav-item:hover {
+background-color: var(--hover-color);
+color: var(--primary-color);
+}
+
+.theme-switch {
+margin-top: auto;
+padding-top: 20px;
+font-size: 14px;
+}
+
+/** Main Section **/
+.main-content {
+flex: 1;
+background: var(--white);
+}
+
+.main-content .main{
+    background-color: var(--bg-color);
+}
+
+/** Stat Card **/
+.stat-card {
+border: none;
+border-radius: 8px;
+padding: 20px;
+height: 100%;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+
+.stat-card img {
+    height: 32px;
+    width: 32px;
+}
+
+.stat-card .title {
+    font-size: 16px;
+    color:var(--primary-color);
+}
+
+.unqiue-card{
+    background-color: var(--primary-color);
+    .title{
+        color: var(--white);
+    }
+    
+}
+
+.stat-card .content .left{
+    display: inline-block;
+    font-size: 16px;
+}
+
+.stat-card .content .right{
+    display: inline-block;
+    font-size: 12px;
+}
+
+.stat-card .content .increase{
+    color: var(--green);
+}
+
+.stat-card .content .decrease{
+    color: var(--red);
+}
+
+/** Search Bar **/
+.search-input {
+max-width: 495px;
+}
+
+.calendar-container {
+max-width: 300px;
+font-size: 14px;
+}
+
+.pika-table th {
+color: var(--dark-grey);
+font-weight: 600;
+}
+
+.pika-single {
+box-shadow: none;
+border-radius: 8px;
+}
+
+.pika-button {
+background-color: var(--white);
+transition: 0.2s;
+}
+
+.pika-button:hover {
+background-color: var(--primary-color);
+color: var(--white) !important;
+}
+
+.pika-selected {
+background-color: var(--primary-color) !important;
+color: white !important;
+}
+
+.text-purple {
+color: #8e44ad;
+}
+
+.text-orange {
+color: #e67e22;
+}
+
+.text-yellow {
+color: #f1c40f;
+}
+
+

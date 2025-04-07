@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CureHub Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Pikaday Calendar -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Moment.js (required for Pikaday date parsing) -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+<!-- Pikaday Calendar -->
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+
+
+<body>
+<div class="d-flex ">
+<!-- Sidebar -->
+<aside class="sidebar p-3 ">
+    <div class="d-flex align-items-center mb-4">
+    <img src="images/Logo.png" alt="CureHub Logo" height="32" />
+    </div>
+    <ul class="nav flex-column">
+    <li class="nav-item active"><i class="fa fa-chart-line me-2"></i>Dashboard</li>
+    <li class="nav-item"><i class="fa fa-calendar me-2"></i>Appointments</li>
+    <li class="nav-item"><i class="fa fa-user-injured me-2"></i>Patients</li>
+    <li class="nav-item"><i class="fa fa-cog me-2"></i>Settings</li>
+    </ul>
+    <div class="theme-switch mt-auto">
+    <span><i class="fa fa-sun"></i> Light</span>
+    <span><i class="fa fa-moon ms-3"></i> Dark</span>
+    </div>
+</aside>
+
+<!-- Main Content -->
+<main class="main-content">
+    <!-- * Upper Tab -->
+    <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
+    <input type="text" class="form-control search-input" placeholder="Search here...." />
+    <div class="d-flex align-items-center">
+        <i class="fa fa-envelope me-3"></i>
+        <i class="fa fa-bell me-3"></i>
+        <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
+        <div class="ms-2">
+        <strong>Dr. Oliver Widson</strong>
+        <div class="text-muted small">Manager</div>
+        </div>
+    </div>
+    </div>
+
+    <div class="main container">
+         <!-- * Stats Cards -->
+    <div class="row g-3 mb-4 p-3">
+        <!-- First Appointment Card -->
+        <div class="col-md-3">
+            <div class="card stat-card text-white p-3 unqiue-card">
+                <img src="images/totalAppointmentsIcon.png" alt="Total Appointments icon">
+                <div class="title mt-3">Total Appointments</div>
+                <div class="content mt-3 d-flex justify-content-between">
+                    <p class="left">9,200</p> 
+                    <p class="right">Last week <span class="increase">+32% ↑</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Total Patients Card -->
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <img src="images/NewPatientsIcon.png" alt="Total Appointments icon">
+                <div class="title mt-3">New Patients</div>
+                <div class="content mt-3 d-flex justify-content-between">
+                    <p class="left">1200</p> 
+                    <p class="right">Last week <span class="increase">+20% ↑</span></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Total Doctors Card -->
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <img src="images/totalDoctorsIcon.png" alt="Total Appointments icon">
+                <div class="title mt-3">Total Doctors</div>
+                <div class="content mt-3 d-flex justify-content-between">
+                    <p class="left">300</p> 
+                    <p class="right">Last week <span class="decrease">+12% ↓</span></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Canceled Appointments Card -->
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <img src="images/canceledAppointmentsIcon.png" alt="Total Appointments icon">
+                <div class="title mt-3">Canceled Appointments</div>
+                <div class="content mt-3 d-flex justify-content-between">
+                    <p class="left">12</p> 
+                    <p class="right">Last week <span class="decrease">+12% ↓</span></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Charts & Schedule -->
+        <div class="row g-4">
+        <div class="col-md-8">
+            <div class="card p-3 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="mb-0">Appointments by Gender</h6>
+                <select class="form-select form-select-sm w-auto">
+                <option selected>Weekly</option>
+                <option>Monthly</option>
+                </select>
+            </div>
+            <canvas id="barChart" height="150"></canvas>
+            </div>
+
+            <!-- Calendar -->
+            <div class="card p-3">
+            <div class="d-flex justify-content-between mb-3">
+                <h6 class="mb-0">Doctors Schedule</h6>
+                <a href="#">See More</a>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="calendar-container">
+                    <input type="text" id="calendar" class="form-control d-none" />
+                    <div id="calendar-display"></div>
+                </div>
+            
+                <div>
+                <h6>Activity Details</h6>
+                <ul class="list-unstyled">
+                    <li><strong>Dr. Mart Edisson</strong> <span class="text-muted">11:00 - 1:00 PM</span> <span class="badge bg-primary">GP</span></li>
+                    <li><strong>Dr. Mart Edisson</strong> <span class="text-muted">5:00 - 7:00 PM</span> <span class="badge bg-warning text-dark">Ortho</span></li>
+                    <li><strong>Dr. Mart Edisson</strong> <span class="text-muted">9:00 - 11:00 AM</span> <span class="badge bg-danger">ENT</span></li>
+                </ul>
+                <button class="btn btn-outline-primary btn-sm">Add New</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Donut Chart -->
+        <div class="col-md-4">
+            <div class="card p-3">
+            <div class="d-flex justify-content-between">
+                <h6>Top Patient Department</h6>
+                <a href="#">See More</a>
+            </div>
+            <canvas id="donutChart" height="180"></canvas>
+            <ul class="list-unstyled mt-3">
+                <li><i class="fa fa-circle text-info me-2"></i>General Physician <span class="float-end">35%</span></li>
+                <li><i class="fa fa-circle text-purple me-2"></i>ENT <span class="float-end">15%</span></li>
+                <li><i class="fa fa-circle text-orange me-2"></i>Orthopedic <span class="float-end">10%</span></li>
+                <li><i class="fa fa-circle text-warning me-2"></i>Dentist <span class="float-end">25%</span></li>
+                <li><i class="fa fa-circle text-yellow me-2"></i>Cardiology <span class="float-end">5%</span></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</main>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
