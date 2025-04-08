@@ -6,28 +6,56 @@ data: {
 labels: ['Sat.', 'Sun.', 'Mon.', 'Tues.', 'Wed.', 'Thurs.', 'Friday'],
 datasets: [
     {
-    label: 'Women 67%',
-    backgroundColor: '#f39c12',
-    data: [500, 600, 700, 800, 900, 700, 950],
-    },
+        label: 'Men 33%',
+        backgroundColor: '#00A8B580',
+        data: [600, 650, 610, 650, 710, 910, 1000],
+        barThickness: 10,
+        borderRadius: 28,
+        },
     {
-    label: 'Men 33%',
-    backgroundColor: '#1abc9c',
-    data: [400, 450, 500, 600, 750, 600, 700],
-    },
+    label: 'Women 67%',
+    backgroundColor: '#FFA246',
+    data: [800, 590, 710, 610, 900, 720, 980],
+    barThickness: 10,
+    borderRadius: 28,
+    }
+    
 ],
 },
 options: {
 responsive: true,
-plugins: { legend: { position: 'top' } },
-scales: {
-    y: {
-    beginAtZero: true,
-    ticks: { stepSize: 100 },
+plugins: {
+    legend: {
+    display: false 
     },
 },
-},
+scales: {
+    y: {
+    beginAtZero: false,
+    ticks: {
+        stepSize: 100,
+    },
+    max: 1000,
+    grid: {
+        color: '#f0f0f0'
+    }
+    },
+    x: {
+    grid: {
+        display: false
+    },
+    ticks:{
+        color:'#000000',
+        font: {
+            weight: 'bold', // Optional: makes day labels bold
+        }
+    }
+    }
+}
+}
 });
+
+
 
 // Donut Chart
 const donutCtx = document.getElementById('donutChart').getContext('2d');

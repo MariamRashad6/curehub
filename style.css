@@ -12,12 +12,15 @@
     --hover-color: #0DE3F41A;
 }
 
-
+/* * General Styles * */
 body {
 font-family: 'Inter', sans-serif;
 background-color: var(--bg-color);
 }
 
+.card {
+    border: none;
+}
 
 /** Side bar **/
 
@@ -109,6 +112,33 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 .search-input {
 max-width: 495px;
 }
+
+/* * Bar Chart */
+
+
+.legend-color {
+width: 12px;
+height: 12px;
+border-radius: 2px;
+}
+
+.women {
+    background-color: var(--orange);
+}
+
+.men {
+    background-color: var(--primary-color);
+}
+
+canvas {
+margin-top: 10px;
+}
+
+.chart-select {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
 
 .calendar-container {
 max-width: 300px;

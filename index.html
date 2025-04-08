@@ -63,8 +63,8 @@
     </div>
 
     <div class="main container">
-         <!-- * Stats Cards -->
     <div class="row g-3 mb-4 p-3">
+        <!-- * Stats Cards -->
         <!-- First Appointment Card -->
         <div class="col-md-3">
             <div class="card stat-card text-white p-3 unqiue-card">
@@ -113,18 +113,28 @@
             </div>
         </div>
     
-        <!-- Charts & Schedule -->
+        <!-- * Charts & Schedule -->
         <div class="row g-4">
+        <!-- 1st Column -->
         <div class="col-md-8">
+            <!-- Bar Chart -->
             <div class="card p-3 mb-4">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h6 class="mb-0">Appointments by Gender</h6>
-                <select class="form-select form-select-sm w-auto">
-                <option selected>Weekly</option>
+            <div class="d-flex justify-content-between align-items-center mb-2 ms-3">
+                <div class="d-flex align-items-center gap-3">
+                <h6 class="mb-0 me-4">Appointments By Gender</h6>
+                <div class="legend-box d-flex align-items-center gap-2 ms-4 me-4">
+                    <div class="legend-color women"></div>
+                    <span class="small">Women 67%</span>
+                    <div class="legend-color ms-3 men"></div>
+                    <span class="small">Men 33%</span>
+                </div><select class="form-select form-select-sm w-auto chart-select ms-3" fdprocessedid="ub8p3e">
+                <option selected="">Weekly</option>
                 <option>Monthly</option>
                 </select>
+                </div>
+                
             </div>
-            <canvas id="barChart" height="150"></canvas>
+            <canvas id="barChart" height="200"></canvas>
             </div>
 
             <!-- Calendar -->
@@ -151,7 +161,7 @@
             </div>
             </div>
         </div>
-    
+        <!-- 2nd Column -->
         <!-- Donut Chart -->
         <div class="col-md-4">
             <div class="card p-3">
@@ -159,7 +169,7 @@
                 <h6>Top Patient Department</h6>
                 <a href="#">See More</a>
             </div>
-            <canvas id="donutChart" height="180"></canvas>
+            <canvas id="donutChart" height="20" width="5"></canvas>
             <ul class="list-unstyled mt-3">
                 <li><i class="fa fa-circle text-info me-2"></i>General Physician <span class="float-end">35%</span></li>
                 <li><i class="fa fa-circle text-purple me-2"></i>ENT <span class="float-end">15%</span></li>
