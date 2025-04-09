@@ -18,6 +18,12 @@ font-family: 'Inter', sans-serif;
 background-color: var(--bg-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-size: 14px;
+}
+
 .card {
     border: none;
 }
@@ -36,13 +42,15 @@ flex-direction: column;
 padding: 12px;
 cursor: pointer;
 color: var(--light-grey);
-border-radius: 8px;
+
 }
 
 .sidebar .nav-item.active,
 .sidebar .nav-item:hover {
 background-color: var(--hover-color);
 color: var(--primary-color);
+border-right: 3px solid var(--primary-color);
+
 }
 
 .theme-switch {
@@ -70,8 +78,6 @@ height: 100%;
 box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-
-
 .stat-card img {
     height: 32px;
     width: 32px;
@@ -82,7 +88,7 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     color:var(--primary-color);
 }
 
-.unqiue-card{
+.unique-card {
     background-color: var(--primary-color);
     .title{
         color: var(--white);
@@ -140,46 +146,222 @@ margin-top: 10px;
 }
 
 
-.calendar-container {
-max-width: 300px;
+/* * Donut Chart * */
+.department-list li {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 10px;
+cursor: pointer;
+border-bottom: 1px solid #EDEDED;
+}
+
+.department-list li:hover {
+background-color: #f1f3f5;
+}
+
+.department-info {
+display: flex;
+align-items: center;
+gap: 12px;
+font-weight: 500;
+}
+
+.department-info .title {
+color: var(--basic);
 font-size: 14px;
 }
 
-.pika-table th {
-color: var(--dark-grey);
+.department-info .subtitle {
+    color: var(--light-grey);
+    font-size: 12px;
+    }
+
+.department-icon {
+width: 32px;
+height:32px;
+border-radius: 50%;
+}
+
+.department-list li.dimmed {
+opacity: 0.3;
+pointer-events: none;
+}
+
+.department-list li.highlighted {
+opacity: 1;
 font-weight: 600;
 }
 
+.chartjs-tooltip {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    pointer-events: none;
+    z-index: 10;
+    transform: translate(-50%, -120%);
+    white-space: nowrap;
+}
+
+.chartjs-tooltip .tooltip-title {
+margin-bottom: 4px;
+font-weight: 600;
+}
+
+.chartjs-tooltip .tooltip-value {
+font-size: 14px;
+color: #666;
+}
+
+
+#donutWrapper {
+position: relative;
+width: 100%;
+max-width: 220px;
+margin: 0 auto;
+}
+
+#donutChart {
+width: 100% !important;
+height: auto !important;
+}
+
+.center-image {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height:  80px;
+opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+.center-image {
+    height: 40px;
+}
+}
+
+
+
+/* * Calendar */
+.schedule-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .pika-single {
-box-shadow: none;
-border-radius: 8px;
+    box-shadow: none;
+    border-radius: 8px;
+    border: none;
+}
+
+.pika-table th {
+    font-weight: 600;
+    color: #555;
 }
 
 .pika-button {
-background-color: var(--white);
-transition: 0.2s;
+    background-color: white;
+    transition: 0.2s;
+    text-align: center;
+    font-weight: bold;
+    color: var(--light-grey);
 }
 
 .pika-button:hover {
-background-color: var(--primary-color);
-color: var(--white) !important;
+    background-color: var(--primary-color);
+    color: white;
 }
 
-.pika-selected {
-background-color: var(--primary-color) !important;
-color: white !important;
+.is-selected .pika-button{
+    background: var(--primary-color);
+    color: white;
 }
 
-.text-purple {
-color: #8e44ad;
+abbr[title] {
+    text-decoration: none;
 }
 
-.text-orange {
-color: #e67e22;
+.pika-title {
+    color: var(--primary-color);
 }
 
-.text-yellow {
-color: #f1c40f;
+.pika-lendar {
+    width: 330px;
 }
 
+.activity-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.activity-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.activity-text small {
+    font-size: 0.8rem;
+    color: #888;
+    display: block;
+}
+
+  .badge-dot {
+    font-size: 12px;
+    background-color: transparent;
+    color: #f37e4a;
+    font-weight: 500;
+  }
+
+.add-btn {
+gap: 6px;
+color: var(--basic);
+border-color: var(--primary-color);
+font-weight: bold;
+}
+
+.add-btn:hover {
+    border-color: var(--primary-color);
+}
+
+  @media (max-width: 767px) {
+    .calendar-container {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+/* * Vertical scroll bar * */
+.activity-scroll-container {
+    max-height: 178px; /* Adjust height as needed */
+    overflow-y: auto;
+    padding-right: 8px; /* space for scrollbar */
+  }
+  
+  .activity-scroll-container::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .activity-scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .activity-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CureHub Dashboard</title>
+    <title>Cure Hub</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -21,16 +21,13 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<!-- Moment.js (required for Pikaday date parsing) -->
-<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
-<!-- Pikaday Calendar -->
-<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+
 
 
 <body>
 <div class="d-flex ">
 <!-- Sidebar -->
-<aside class="sidebar p-3 ">
+<aside class="sidebar p-3 pe-0">
     <div class="d-flex align-items-center mb-4">
     <img src="images/Logo.png" alt="CureHub Logo" height="32" />
     </div>
@@ -51,23 +48,24 @@
     <!-- * Upper Tab -->
     <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
     <input type="text" class="form-control search-input" placeholder="Search here...." />
-    <div class="d-flex align-items-center">
-        <i class="fa fa-envelope me-3"></i>
-        <i class="fa fa-bell me-3"></i>
+    <div class="d-flex align-items-center me-4">
+        <img class="me-2" src="images/Message.png" alt="">
+        <img class="me-2" src="images/Notification icon.png" alt="">
         <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
         <div class="ms-2">
         <strong>Dr. Oliver Widson</strong>
         <div class="text-muted small">Manager</div>
         </div>
+        <img class="ms-2" src="images/arrowdown.png" alt="">
     </div>
     </div>
 
     <div class="main container">
-    <div class="row g-3 mb-4 p-3">
+    <div class="row g-3 p-3">
         <!-- * Stats Cards -->
         <!-- First Appointment Card -->
         <div class="col-md-3">
-            <div class="card stat-card text-white p-3 unqiue-card">
+            <div class="card stat-card text-white p-3 unique-card">
                 <img src="images/totalAppointmentsIcon.png" alt="Total Appointments icon">
                 <div class="title mt-3">Total Appointments</div>
                 <div class="content mt-3 d-flex justify-content-between">
@@ -139,46 +137,159 @@
 
             <!-- Calendar -->
             <div class="card p-3">
-            <div class="d-flex justify-content-between mb-3">
-                <h6 class="mb-0">Doctors Schedule</h6>
-                <a href="#">See More</a>
+            <!-- Header Row -->
+            <div class="row justify-content-between align-items-center mb-3 mt-2 ms-1">
+                <div class="col-auto">
+                <h6 class="mb-0 schedule-title">Doctors Schedule</h6>
+                </div>
+                <div class="col-auto">
+                <a href="#" class="schedule-subtitle">See More</a>
+                </div>
             </div>
-            <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <div class="calendar-container">
-                    <input type="text" id="calendar" class="form-control d-none" />
-                    <div id="calendar-display"></div>
+        
+            <!-- Main Content Row -->
+            <div class="row">
+                <!-- Calendar Column -->
+                <div class="col-md-7 calendar-container">
+                <input type="text" id="calendar" class="form-control d-none" />
+                <div id="calendar-display"></div>
                 </div>
-            
-                <div>
-                <h6>Activity Details</h6>
-                <ul class="list-unstyled">
-                    <li><strong>Dr. Mart Edisson</strong> <span class="text-muted">11:00 - 1:00 PM</span> <span class="badge bg-primary">GP</span></li>
-                    <li><strong>Dr. Mart Edisson</strong> <span class="text-muted">5:00 - 7:00 PM</span> <span class="badge bg-warning text-dark">Ortho</span></li>
-                    <li><strong>Dr. Mart Edisson</strong> <span class="text-muted">9:00 - 11:00 AM</span> <span class="badge bg-danger">ENT</span></li>
-                </ul>
-                <button class="btn btn-outline-primary btn-sm">Add New</button>
+        
+                <!-- Activities Column -->
+                <div class="col-md-5">
+                <h6 class="activity-title">Activity Details</h6>
+                
+                <div class="activity-scroll-container">
+                    <div class="activity-item">
+                    <img src="images/doctorScheduleImg.png" alt="avatar" class="activity-avatar" />
+                    <div class="activity-text">
+                        <strong>Dr. Mart Edisson <span class="badge badge-dot">• GP</span></strong>
+                        <small>11:00 - 1:00 PM</small>
+                    </div>
+                    </div>
+                
+                    <div class="activity-item">
+                    <img src="images/doctorScheduleImg.png" alt="avatar" class="activity-avatar" />
+                    <div class="activity-text">
+                        <strong>Dr. Mart Edisson <span class="badge badge-dot">• Ortho</span></strong>
+                        <small>5:00 - 7:00 PM</small>
+                    </div>
+                    </div>
+                
+                    <div class="activity-item">
+                    <img src="images/doctorScheduleImg.png" alt="avatar" class="activity-avatar" />
+                    <div class="activity-text">
+                        <strong>Dr. Mart Edisson <span class="badge badge-dot">• ENT</span></strong>
+                        <small>9:00 - 11:00 AM</small>
+                    </div>
+                    </div>
+                
+                    <div class="activity-item">
+                    <img src="images/doctorScheduleImg.png" alt="avatar" class="activity-avatar" />
+                    <div class="activity-text">
+                        <strong>Dr. Mart Edisson <span class="badge badge-dot">• ENT</span></strong>
+                        <small>9:00 - 11:00 AM</small>
+                    </div>
+                    </div>
+                    <div class="activity-item">
+                    <img src="images/doctorScheduleImg.png" alt="avatar" class="activity-avatar" />
+                    <div class="activity-text">
+                        <strong>Dr. Mart Edisson <span class="badge badge-dot">• ENT</span></strong>
+                        <small>9:00 - 11:00 AM</small>
+                    </div>
+                    </div>
+
                 </div>
+                
+                <div class="text-center mt-4">
+                    <button class="btn btn-sm add-btn mt-2">
+                    <img src="images/addIcon.png" alt="add icon"> Add New
+                    </button>
+                </div>
+                </div>
+                
             </div>
             </div>
         </div>
         <!-- 2nd Column -->
         <!-- Donut Chart -->
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4 mx-auto">
             <div class="card p-3">
-            <div class="d-flex justify-content-between">
-                <h6>Top Patient Department</h6>
-                <a href="#">See More</a>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="mb-0 fw-bold">Top Patient Department</h6>
+            <a href="#" class="text-muted small ">See More</a>
             </div>
-            <canvas id="donutChart" height="20" width="5"></canvas>
-            <ul class="list-unstyled mt-3">
-                <li><i class="fa fa-circle text-info me-2"></i>General Physician <span class="float-end">35%</span></li>
-                <li><i class="fa fa-circle text-purple me-2"></i>ENT <span class="float-end">15%</span></li>
-                <li><i class="fa fa-circle text-orange me-2"></i>Orthopedic <span class="float-end">10%</span></li>
-                <li><i class="fa fa-circle text-warning me-2"></i>Dentist <span class="float-end">25%</span></li>
-                <li><i class="fa fa-circle text-yellow me-2"></i>Cardiology <span class="float-end">5%</span></li>
+        
+            <div id="donutWrapper">
+            <canvas id="donutChart"></canvas>
+            <img src="images/topPatientIcon.png" class="center-image" alt="icon" />
+            </div>
+        
+            <ul class="list-unstyled department-list mt-4">
+            <li data-index="0">
+                <div class="department-info">
+                    <div class="department-icon d-flex justify-content-center align-items-center" style="background-color: #00A8B5;">
+                        <img src="images/generalPhysicianIcon.png" class="img-fluid p-1" alt="">
+                    </div>
+                    <div>
+                        <div class="title">General Physician</div>
+                        <div class="subtitle">35%</div>
+                    </div>
+                </div>
+                <div class="arrow"><img src="images/arrowIcon.png" alt=""></div>
+            </li>
+            <li data-index="1">
+                <div class="department-info">
+                    <div class="department-icon d-flex justify-content-center align-items-center" style="background-color: #9446fa;">
+                        <img src="images/entIcon.png" class="img-fluid p-1" alt="">
+                    </div>
+                    <div>
+                        <div class="title">ENT</div>
+                        <div class="subtitle">15%</div>
+                    </div>
+                </div>
+                <div class="arrow"><img src="images/arrowIcon.png" alt=""></div>
+            </li>
+            <li data-index="2">
+                <div class="department-info">
+                    <div class="department-icon d-flex justify-content-center align-items-center" style="background-color: #74c7ce;">
+                        <img src="images/orthopedicIcon.png" class="img-fluid p-1" alt="">
+                    </div>
+                    <div>
+                        <div class="title">Orthopedic</div>
+                        <div class="subtitle">10%</div>
+                    </div>
+                </div>
+                <div class="arrow"><img src="images/arrowIcon.png" alt=""></div>
+            </li>
+            <li data-index="3">
+                <div class="department-info">
+                    <div class="department-icon d-flex justify-content-center align-items-center" style="background-color: #f7912c;">
+                        <img src="images/dentistIcon.png" class="img-fluid p-1" alt="">
+                    </div>
+                    <div>
+                        <div class="title">Dentist</div>
+                        <div class="subtitle">25%</div>
+                    </div>
+                </div>
+                <div class="arrow"><img src="images/arrowIcon.png" alt=""></div>
+            </li>
+            <li data-index="4">
+                <div class="department-info">
+                    <div class="department-icon d-flex justify-content-center align-items-center" style="background-color: #f9c700;">
+                        <img src="images/cardiologyIcon.png" class="img-fluid p-1" alt="">
+                    </div>
+                    <div>
+                        <div class="title">Cardiology</div>
+                        <div class="subtitle">5%</div>
+                    </div>
+                </div>
+                <div class="arrow"><img src="images/arrowIcon.png" alt=""></div>
+            </li>
             </ul>
-            </div>
         </div>
+        </div>
+        
         </div>
     </div>
 
@@ -189,6 +300,10 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Moment.js (required for Pikaday date parsing) -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+<!-- Pikaday Calendar -->
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 </body>
