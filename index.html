@@ -29,18 +29,25 @@
 <!-- Sidebar -->
 <aside class="sidebar p-3 pe-0">
     <div class="d-flex align-items-center mb-4">
-    <img src="images/Logo.png" alt="CureHub Logo" height="32" />
+    <img src="images/Logo.png" alt="CureHub Logo" height="45" />
     </div>
-    <ul class="nav flex-column">
+    <ul class="nav flex-column gap-3">
     <li class="nav-item active"><i class="fa fa-chart-line me-2"></i>Dashboard</li>
     <li class="nav-item"><i class="fa fa-calendar me-2"></i>Appointments</li>
     <li class="nav-item"><i class="fa fa-user-injured me-2"></i>Patients</li>
     <li class="nav-item"><i class="fa fa-cog me-2"></i>Settings</li>
+    <li class="mt-5 pt-5"><div class="theme-switch mt-auto me-3">
+        <div class="theme-option active">
+            <i class="fa-solid fa-sun"></i>
+            Light
+        </div>
+        <div class="theme-option dark">
+            <i class="fa-regular fa-moon"></i>
+            Dark
+        </div>
+        </div></li>
     </ul>
-    <div class="theme-switch mt-auto">
-    <span><i class="fa fa-sun"></i> Light</span>
-    <span><i class="fa fa-moon ms-3"></i> Dark</span>
-    </div>
+    
 </aside>
 
 <!-- Main Content -->
@@ -49,13 +56,16 @@
     <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
     <input type="text" class="form-control search-input" placeholder="Search here...." />
     <div class="d-flex align-items-center me-4">
-        <img class="me-2" src="images/Message.png" alt="">
-        <img class="me-2" src="images/Notification icon.png" alt="">
-        <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
-        <div class="ms-2">
-        <strong>Dr. Oliver Widson</strong>
-        <div class="text-muted small">Manager</div>
+        <div class="d-flex align-items-center me-5">
+            <img class="me-3" src="images/Message.png" alt="">
+            <img class="me-3" src="images/Notification icon.png" alt="">
+            <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
+            <div class="ms-3">
+            <strong>Dr. Oliver Widson</strong>
+            <div class="text-muted small">Manager</div>
+            </div>
         </div>
+        
         <img class="ms-2" src="images/arrowdown.png" alt="">
     </div>
     </div>
@@ -112,7 +122,7 @@
         </div>
     
         <!-- * Charts & Schedule -->
-        <div class="row g-4">
+        <div class="row gy-2 ps-2 pe-0">
         <!-- 1st Column -->
         <div class="col-md-8">
             <!-- Bar Chart -->
@@ -213,7 +223,7 @@
         </div>
         <!-- 2nd Column -->
         <!-- Donut Chart -->
-        <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="col-md-6 col-lg-4 pe-0">
             <div class="card p-3">
             <div class="d-flex justify-content-between align-items-center mb-3">
             <h6 class="mb-0 fw-bold">Top Patient Department</h6>
