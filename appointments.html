@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cure Hub</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Pikaday Calendar -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="appointmentStyle.css" />
+</head>
+
+
+
+
+<body>
+<div class="d-flex ">
+<!-- Sidebar -->
+<aside class="sidebar p-3 pe-0">
+    <div class="d-flex align-items-center mb-4">
+    <img src="images/Logo.png" alt="CureHub Logo" height="45" />
+    </div>
+    <ul class="nav flex-column gap-3">
+    <li class="nav-item"><i class="fa fa-chart-line me-2"></i>Dashboard</li>
+    <li class="nav-item active"><i class="fa fa-calendar me-2"></i>Appointments</li>
+    <li class="nav-item"><i class="fa fa-user-injured me-2"></i>Patients</li>
+    <li class="nav-item"><i class="fa fa-cog me-2"></i>Settings</li>
+    <li class="mt-5 pt-5"><div class="theme-switch me-3">
+        <div class="theme-option active">
+            <i class="fa-solid fa-sun"></i>
+            Light
+        </div>
+        <div class="theme-option dark">
+            <i class="fa-regular fa-moon"></i>
+            Dark
+        </div>
+        </div></li>
+    </ul>
+    
+</aside>
+
+<!-- Main Content -->
+<main class="main-content">
+    <!-- * Upper Tab -->
+    <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
+    <input type="text" class="form-control search-input" placeholder="Search here...." />
+    <div class="d-flex align-items-center me-4">
+        <div class="d-flex align-items-center me-5">
+            <img class="me-3" src="images/Message.png" alt="">
+            <img class="me-3" src="images/Notification icon.png" alt="">
+            <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
+            <div class="ms-3">
+            <strong>Dr. Oliver Widson</strong>
+            <div class="text-muted small">Manager</div>
+            </div>
+        </div>
+        
+        <img class="ms-2" src="images/arrowdown.png" alt="">
+    </div>
+    </div>
+
+    <div class="main container p-3">
+
+        
+    <div class="card p-3">
+
+        <!-- Tabs and Buttons Container -->
+<div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="appointmentTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="req-tab" data-bs-toggle="tab" data-bs-target="#req" type="button" role="tab">
+          Appointments Request
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab">
+          Appointments List
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="doctor-tab" data-bs-toggle="tab" data-bs-target="#doctor" type="button" role="tab">
+          Doctor List
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="sched-tab" data-bs-toggle="tab" data-bs-target="#sched" type="button" role="tab">
+          Doctor Schedule
+        </button>
+      </li>
+    </ul>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2 mt-2 mt-md-0">
+    <select class="form-select form-select-sm">
+        <option selected>Sort by</option>
+        <option value="name">Name</option>
+        <option value="date">Date</option>
+    </select>
+      <button class="btn btn-info btn-sm text-white">
+        <i class="fa fa-plus me-1"></i> Add New
+      </button>
+    </div>
+  
+  </div>
+  
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+
+    <!-- Appointments Request -->
+    <div class="tab-pane fade show active" id="req" role="tabpanel">
+        <div class="table-responsive  card">
+        <table class="table text-center" id="requestTable">
+            <thead class="table-primary">
+            <tr>
+                <th>Patient Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Doctor</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- JS will populate rows -->
+            </tbody>
+        </table>
+        </div>
+        <!-- Pagination -->
+    <nav aria-label="Table pagination">
+        <ul class="pagination justify-content-center pagination-sm mt-3">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><img src="images/arrowleft.png" alt=""></a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#">6</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#"><img src="images/arrowIcon.png" alt=""></a>
+        </li>
+        </ul>
+    </nav>
+    </div>
+
+    <!-- Appointments List -->
+    <div class="tab-pane fade" id="list" role="tabpanel">
+        <div class="table-responsive card">
+        <table class="table table-hover" id="AppointmentData">
+            <thead class="table-secondary">
+            <tr>
+                <th>Patient Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Doctor</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- JS will populate rows -->
+            </tbody>
+        </table>
+        </div>
+        <nav aria-label="Table pagination">
+            <ul class="pagination justify-content-center pagination-sm mt-3">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Doctor Schedule -->
+    <div class="tab-pane fade" id="sched" role="tabpanel">
+        <!-- Header -->
+    <div class="flex justify-content-between align-items-center mb-3">
+        <button class="btn btn-info text-white">
+          <i class="fa-regular fa-calendar me-2"></i> November
+        </button>
+        <button class="btn btn-outline-secondary">Edit</button>
+      </div>
+  
+      <!-- Schedule Table -->
+      <div class="table-responsive">
+        <table class="table table-bordered  align-middle doctor-calendar">
+          <thead class="schedule-table text-center">
+            <tr>
+              <th>Sunday</th>
+              <th>Saturday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="schedule orange">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>10:00–12:00 PM</div>
+                <div>Dr. John (Dentist)</div>
+              </td>
+              <td></td>
+              <td class="schedule green">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>10:00–3:00 PM</div>
+                <div>Dr. John (GP)</div>
+              </td>
+              <td></td>
+              <td class="schedule blue">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>10:00–12:00 PM</div>
+                <div>Dr. John (GIT)</div>
+              </td>
+              <td class="schedule purple">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>1:00–3:00 PM</div>
+                <div>Dr. John (ENT)</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="schedule yellow">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>2:00–4:00 PM</div>
+                <div>Dr. John (GP)</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td class="schedule orange">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>3:00–5:00 PM</div>
+                <div>Dr. John (Dentist)</div>
+              </td>
+              <td></td>
+              <td class="schedule orange">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>6:00–7:00 PM</div>
+                <div>Dr. John (Dentist)</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="schedule yellow">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>7:00–9:00 PM</div>
+                <div>Dr. John (Ortho)</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td class="schedule green">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>5:00–7:00 PM</div>
+                <div>Dr. John (GP)</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="schedule blue">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>9:00–11:00 PM</div>
+                <div>Dr. John (GIT)</div>
+              </td>
+              <td></td>
+              <td class="schedule purple">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>10:00–12:00 AM</div>
+                <div>Dr. John (ENT)</div>
+              </td>
+              <td></td>
+              <td class="schedule blue">
+                <img src="images/doctorScheduleImg.png" alt="" />
+                <div>10:00–12:00 AM</div>
+                <div>Dr. John (GIT)</div>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    </div>    
+    
+
+        
+    </div>
+
+</main>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="appointmentscript.js"></script>
+</body>
+</html>

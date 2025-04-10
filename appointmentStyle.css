@@ -1,0 +1,210 @@
+/* * Colors Variables * */
+:root {
+    --primary-color: #00A8B5;
+    --basic: #212529;
+    --orange: #F7912C;
+    --green: #0FDC67;
+    --red: #D20013;
+    --light-grey: #999A9D;
+    --dark-grey: #666666;
+    --white: #FFFFFF;
+    --bg-color:#f7f7f7;
+    --hover-color: #0DE3F41A;
+}
+
+/* * General Styles * */
+body {
+font-family: 'Inter', sans-serif;
+background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-size: 14px;
+}
+
+.card {
+    border: none;
+}
+
+/** Side bar **/
+
+.sidebar {
+width: 220px;
+background-color: var(--white);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.sidebar .nav-item {
+padding: 12px;
+cursor: pointer;
+color: var(--light-grey);
+}
+
+.sidebar .nav-item.active,
+.sidebar .nav-item:hover {
+background-color: var(--hover-color);
+color: var(--primary-color);
+border-right: 5px solid var(--primary-color);
+
+}
+
+.theme-switch {
+    background: #F6F8FA;
+    display: inline-flex;
+    padding: 8px;
+    margin-top: 100%;
+}
+
+.theme-option {
+display: flex;
+align-items: center;
+gap: 6px;
+padding: 6px 12px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 500;
+color: #111827;
+}
+
+.theme-option.active {
+background-color: white;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-option i {
+color: var(--orange);
+}
+
+.theme-option.dark i {
+color: #94A3B8;
+}
+
+/** Search Bar **/
+.search-input {
+    max-width: 495px;
+    }
+
+/** Main Section **/
+.main-content {
+flex: 1;
+background: var(--white);
+}
+
+
+
+.main-content .main{
+    background-color: var(--bg-color);
+}
+
+.form-select {
+    width: fit-content;
+    border: 1px solid var(--primary-color);
+    color: var(--basic);
+}
+
+.tab-content {
+padding-top: 1rem;
+}
+.table-responsive {
+max-height: 70vh;
+}
+.status-icon {
+font-size: 1.2rem;
+}
+.tab-pane {
+overflow-x: auto;
+}
+
+.nav-tabs .nav-link{
+    color: var(--light-grey);
+    border: 0;
+    padding-bottom: 0;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.table-primary {
+    --bs-table-color: white;
+    --bs-table-bg: var(--primary-color);
+
+}
+.page-controls {
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.btn-info {
+    background-color: var(--primary-color);
+}
+
+.pagination {
+    --bs-pagination-color: var(--basic);
+    --bs-pagination-border-width: 0;
+    --bs-pagination-hover-color: var(--white);
+    --bs-pagination-hover-bg: var(--primary-color);
+    --bs-pagination-hover-border-color: var(--primary-color);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: var(--primary-color);
+    --bs-pagination-active-border-color: var(--primary-color);
+}   
+
+
+
+
+.doctor-calendar td {
+    height: 120px;
+    vertical-align: middle;
+    padding: 8px;
+    font-size: 14px;
+}
+  
+.schedule-table th{
+    color: var(--primary-color);
+}
+  .schedule {
+
+    
+    font-weight: 500;
+  }
+  
+  .schedule img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px 0;
+    border: 1px solid var(--light-grey);
+  }
+  
+  .schedule.orange {
+    background-color: #fde7d9;
+    color: #d0702e;
+  }
+  
+  .schedule.green {
+    background-color: #d6f7e4;
+    color: #138a52;
+  }
+  
+  .schedule.blue {
+    background-color: #d3f1fd;
+    color: #2083c3;
+  }
+  
+  .schedule.purple {
+    background-color: #e8e4ff;
+    color: #7c59dd;
+  }
+  
+  .schedule.yellow {
+    background-color: #fff6cc;
+    color: #cc9b00;
+  }
+  
