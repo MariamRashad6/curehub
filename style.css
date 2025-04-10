@@ -44,12 +44,22 @@ cursor: pointer;
 color: var(--light-grey);
 }
 
+.sidebar a{
+    cursor: pointer;
+    color: var(--light-grey);
+    font-size: 15px;
+}
+
 .sidebar .nav-item.active,
-.sidebar .nav-item:hover {
+.sidebar .nav-item:hover{
 background-color: var(--hover-color);
 color: var(--primary-color);
 border-right: 5px solid var(--primary-color);
+}
 
+.sidebar .nav-item.active a,
+.sidebar .nav-item:hover a {
+color: var(--primary-color);
 }
 
 .theme-switch {

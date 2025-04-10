@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${item.doctor}</td>
             <td>${item.time}</td>
             <td>${item.date}</td>
-            <td><span class="badge ${badgeClass}">${item.status}</span></td>
+            <td><span class="badge ${badgeClass}">${item.status}</span>
+            <i class="fa-solid fa-ellipsis-vertical text-secondary ms-2"></i></td>
           </tr>`;
         tbody.insertAdjacentHTML('beforeend', row);
       });
