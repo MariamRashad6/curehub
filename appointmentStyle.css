@@ -218,3 +218,65 @@ overflow-x: auto;
     color: #cc9b00;
   }
   
+
+
+  /* Flatpickr custom theme override */
+  .flatpickr-calendar {
+    font-family: "Segoe UI", sans-serif;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  .flatpickr-months {
+    background-color: #00bcd4; /* Teal top bar */
+    color: white;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .flatpickr-month {
+    padding: 0.5rem 1rem;
+  }
+
+  .flatpickr-prev-month, .flatpickr-next-month {
+    color: white;
+  }
+
+  .flatpickr-weekdays {
+    background-color: #f4f6f9;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+  }
+
+  .flatpickr-weekday {
+    color: #333;
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+  }
+
+  .flatpickr-day {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    margin: 2px 0;
+  }
+
+  .flatpickr-day.today {
+    border: 1px solid #00bcd4;
+    color: #00bcd4;
+  }
+
+  .flatpickr-day.selected,
+  .flatpickr-day.startRange,
+  .flatpickr-day.endRange,
+  .flatpickr-day.inRange {
+    background-color: #00bcd4 !important;
+    color: white !important;
+  }
+
+  .flatpickr-day:hover {
+    background-color: #00acc1;
+    color: white;
+  }

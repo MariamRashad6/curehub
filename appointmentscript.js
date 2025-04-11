@@ -77,3 +77,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
   
+
+
+  // Flatpickr
+  const calendarInput = document.getElementById("calendarInput");
+  const calendarTrigger = document.getElementById("calendarTrigger");
+
+  // Initialize Flatpickr
+  const calendar = flatpickr(calendarInput, {
+    inline: false,
+    defaultDate: "2024-11-01",
+    dateFormat: "d M Y",
+    position: "below",
+    onChange: function(selectedDates, dateStr) {
+      console.log("Date selected:", dateStr);
+      // Optional: dynamically filter doctor schedule here
+    },
+  });
+
+  // Show Flatpickr when button is clicked
+  calendarTrigger.addEventListener("click", function () {
+    calendar.open();
+  });
