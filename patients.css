@@ -1,0 +1,86 @@
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  }
+  .title {
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #333;
+  }
+  .sub {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .btn-primary {
+    background-color: #00bfa5;
+    border: none;
+    width: 100%;
+  }
+  .email {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  .department-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .department-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .department-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+  }
+  .right-icons img {
+    width: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .see-more {
+    text-align: center;
+    margin-top: 10%;
+  }
+.text-muted.small {
+font-size: 0.85rem;
+}
+
+.activity-scroll-container {
+    max-height: 200px;
+}
+
+
+.prescription-list .activity-scroll-container {
+    max-height: 400px;
+}
+
+.appointments-scroll .activity-scroll-container {
+    max-height: 400px;
+}
+
+.appointment-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+.appointment-list-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .appointment-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  
