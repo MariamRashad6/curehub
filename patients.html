@@ -71,7 +71,28 @@
     </div>
     </div>
 
+    
+
     <div class="main container p-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <!-- Breadcrumb and title -->
+            <div class="d-flex align-items-center">
+              <a href="#" class="unique-text me-1">Patients List</a>
+              <span class="secondary-text me-1"><img src="images/arrowIcon.png" alt=""></span>
+              <span class="secondary-text">Sarah Lawson</span>
+            </div>
+          
+            <!-- Action buttons -->
+            <div class="d-flex align-items-center">
+              <button class="btn me-2 p-2  d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                <img src="images/printerIcon.png" alt="">
+              </button>
+              <button class="btn primary-btn d-flex align-items-center">
+                <img src="images/editIcon.png" alt="" class="me-2"> Edit
+              </button>
+            </div>
+          </div>
 
         <!-- 1st row -->
         <div class="row g-3 d-flex align-items-stretch mb-3">
@@ -83,57 +104,60 @@
                     <img src="images/patient.png" class="rounded-circle mb-2" width="80" alt="patient avatar">
                 </div>
                 
-                <h6 class="title">Sarah Lawsson</h6>
-                <p class="email">sarahlawsson1234@gmail.com</p>
+                <h6 class="title primary-text">Sarah Lawsson</h6>
+                <p class="email secondary-text">sarahlawsson1234@gmail.com</p>
                 <div class="d-flex justify-content-around py-2">
-                <div>
-                    <h6 class="mb-0">12</h6>
-                    <small class="text-muted">Past</small>
+                <div class="mt-3">
+                    <h6 class="mb-0 unique-text fw-bolder">12</h6>
+                    <small class="secondary-text">Past</small>
                 </div>
-                <div>
-                    <h6 class="mb-0">1</h6>
-                    <small class="text-muted">Upcoming</small>
+                <div class="mt-3 ms-2">
+                    <img src="images/Line 44.png" alt="">
+                </div>
+                <div class="mt-3">
+                    <h6 class="mb-0 unique-text fw-bolder">1</h6>
+                    <small class="secondary-text">Upcoming</small>
                 </div>
                 </div>
-                <button class="btn btn-primary mt-4">Send Message</button>
+                <button class="btn primary-btn mt-4 w-100">Send Message</button>
             </div>
             </div>
     
             <!-- Column 2: Patient Details -->
             <div class="col-md-5 ps-0">
             <div class="card p-3 h-100">
-                <div class="row p-2 gy-5">
+                <div class="row p-2 gy-4 mt-1">
                 <div class="col-4">
-                    <p class="title">Gender</p>
-                    <p class="sub">Female</p>
+                    <p class="secondary-text">Gender</p>
+                    <p class="primary-text">Female</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Birthday</p>
-                    <p class="sub">23.7.1997</p>
+                    <p class="secondary-text">Birthday</p>
+                    <p class="primary-text">23.7.1997</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Phone Number</p>
-                    <p class="sub">(555) 123-4567</p>
+                    <p class="secondary-text">Phone Number</p>
+                    <p class="primary-text">(555) 123-4567</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Insurance</p>
-                    <p class="sub">Med Right</p>
+                    <p class="secondary-text">Insurance</p>
+                    <p class="primary-text">Med Right</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Register Date</p>
-                    <p class="sub">4 Nov, 2020</p>
+                    <p class="secondary-text">Register Date</p>
+                    <p class="primary-text">4 Nov, 2020</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Marital Status</p>
-                    <p class="sub">Single</p>
+                    <p class="secondary-text">Marital Status</p>
+                    <p class="primary-text">Single</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Address</p>
-                    <p class="sub">12 Loran, Alex.</p>
+                    <p class="secondary-text">Address</p>
+                    <p class="primary-text">12 Loran, Alex.</p>
                 </div>
                 <div class="col-4">
-                    <p class="title">Postal Code</p>
-                    <p class="sub">5310002</p>
+                    <p class="secondary-text">Postal Code</p>
+                    <p class="primary-text">5310002</p>
                 </div>
                 </div>
             </div>
@@ -148,7 +172,7 @@
 
             <!-- Button trigger modal -->
 
-            <a href="#" class="text-primary small" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Files</a>
+            <a href="#" class="unique-text" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="images/addFile.png" alt="">Add Files</a>
 
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -264,207 +288,177 @@
             <!-- 1st Column -->
             <div class="col-8">
                 <div class="card p-3 h-100">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div class="toggle-appointments theme-switch mt-0">
-                        <div class="theme-option active">
-                            Upcomming Appointments
-                        </div>
-                        <div class="theme-option dark">
-                            Post Appointments
-                        </div>
+                  <!-- Header -->
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="toggle-appointments theme-switch mt-0 d-flex">
+                      <div class="theme-option active me-2 unique-text">Upcoming Appointments</div>
+                      <div class="theme-option secondary-text">Post Appointments</div>
                     </div>
-                    <a href="#" class="text-primary small">Add Appointment</a>
-                    </div>
-                    <div class="appointments-scroll">
-                        <div class="activity-scroll-container">
-                            <div class="card p-3 bg-dark">
-                                <ul class="list-unstyled appointment-list">
-                                    <li class="card mb-4">
-                                        <div class="appointment-info">
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Date
-                                                </div>
-                                                <div class="date">
-                                                    26.12.2020
-                                                </div>
-                                            </div>
-                    
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Type
-                                                </div>
-                                                <div class="type">
-                                                    Examine
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Specialist
-                                                </div>
-                                                <div class="specialist">
-                                                    John Albert
-                                                </div>
-                                            </div>
-                                            <div class="cell">
-                                                <span class="badge bg-success">Confirmed</span>
-                                                <img src="images/dotsIcon.png" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="card mb-2">
-                                        <div class="appointment-info">
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Date
-                                                </div>
-                                                <div class="date">
-                                                    26.12.2020
-                                                </div>
-                                            </div>
-                    
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Type
-                                                </div>
-                                                <div class="type">
-                                                    Examine
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Specialist
-                                                </div>
-                                                <div class="specialist">
-                                                    John Albert
-                                                </div>
-                                            </div>
-                                            <div class="cell">
-                                                <span class="badge bg-success">Confirmed</span>
-                                                <img src="images/dotsIcon.png" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="card mb-2">
-                                        <div class="appointment-info">
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Date
-                                                </div>
-                                                <div class="date">
-                                                    26.12.2020
-                                                </div>
-                                            </div>
-                    
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Type
-                                                </div>
-                                                <div class="type">
-                                                    Examine
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Specialist
-                                                </div>
-                                                <div class="specialist">
-                                                    John Albert
-                                                </div>
-                                            </div>
-                                            <div class="cell">
-                                                <span class="badge bg-success">Confirmed</span>
-                                                <img src="images/dotsIcon.png" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="card mb-2">
-                                        <div class="appointment-info">
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Date
-                                                </div>
-                                                <div class="date">
-                                                    26.12.2020
-                                                </div>
-                                            </div>
-                    
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Type
-                                                </div>
-                                                <div class="type">
-                                                    Examine
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Specialist
-                                                </div>
-                                                <div class="specialist">
-                                                    John Albert
-                                                </div>
-                                            </div>
-                                            <div class="cell">
-                                                <span class="badge bg-success">Confirmed</span>
-                                                <img src="images/dotsIcon.png" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="card mb-2">
-                                        <div class="appointment-info">
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Date
-                                                </div>
-                                                <div class="date">
-                                                    26.12.2020
-                                                </div>
-                                            </div>
-                    
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Type
-                                                </div>
-                                                <div class="type">
-                                                    Examine
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="cell">
-                                                <div class="title">
-                                                    Specialist
-                                                </div>
-                                                <div class="specialist">
-                                                    John Albert
-                                                </div>
-                                            </div>
-                                            <div class="cell">
-                                                <span class="badge bg-success">Confirmed</span>
-                                                <img src="images/dotsIcon.png" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    </ul>
+                    <a href="#" class="unique-text"><img src="images/addAppointment.png" alt=""> Add Appointment</a>
+                  </div>
+              
+                  <!-- Timeline Scroll Container -->
+                   
+                <div class="appointments-scroll">
+                    <div class="activity-scroll-container">
+                  
+                        <div class="card p-3"  style="background-color: #F7F7F7;">
+                             <!-- Timeline Entry -->
+                      <div class="timeline-entry d-flex">
+                        <!-- Date Side -->
+                        <div class="timeline-date-wrapper pe-3">
+                          <div class="timeline-line"></div>
+                          <div class="timeline-date">
+                            <div class="date-number primary-text">23</div>
+                            <div class="day text-uppercase secondary-text">Mon</div>
+                          </div>
+                          <div class="timeline-dot"></div>
+                        </div>
+                  
+                        <!-- Appointments Group -->
+                        <div class="flex-grow-1">
+                          <!-- Appointment Card -->
+                          <div class="card p-3 mb-5">
+                            <div class="row">
+                              <div class="col">
+                                <div class="title secondary-text">Date</div>
+                                <div class="primary-text">26.12.2020</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Type</div>
+                                <div class="primary-text">Examine</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Specialist</div>
+                                <div class="primary-text">John Albert</div>
+                              </div>
+                              <div class="col text-end">
+                                <span class="badge confirm">Confirmed</span>
+                                <img src="images/dotsIcon.png" alt="..." class="ms-2" width="18">
+                              </div>
                             </div>
-                       
+                          </div>
                         </div>
+                      </div>
+                  
+                      <!-- Another Timeline Entry -->
+                      <div class="timeline-entry d-flex">
+                        <div class="timeline-date-wrapper pe-3">
+                          <div class="timeline-line"></div>
+                          <div class="timeline-date">
+                            <div class="date-number primary-text">19</div>
+                            <div class="day text-uppercase secondary-text">Thu</div>
+                          </div>
+                          <div class="timeline-dot"></div>
+                        </div>
+                  
+                        <div class="flex-grow-1">
+                          <!-- Card 1 -->
+                          <div class="card p-3 mb-3">
+                            <div class="row">
+                              <div class="col">
+                                <div class="title secondary-text">Date</div>
+                                <div class="primary-text">26.12.2020</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Type</div>
+                                <div class="primary-text">Follow-Up</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Specialist</div>
+                                <div class="primary-text">John Albert</div>
+                              </div>
+                              <div class="col text-end">
+                                <span class="badge canceled">Canceled</span>
+                                <img src="images/dotsIcon.png" alt="..." class="ms-2" width="18">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <!-- Card 2 with icons -->
+                          <div class="card p-3 mb-3">
+                            <div class="row">
+                              <div class="col">
+                                <div class="title secondary-text">Date</div>
+                                <div class="primary-text">26.12.2020</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Type</div>
+                                <div class="primary-text">Follow-Up</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Specialist</div>
+                                <div class="primary-text">John Albert</div>
+                              </div>
+                              <div class="col text-end">
+                                <img src="images/checkIcon.png" alt="✔" width="20" class="me-2">
+                                <img src="images/crossIcon.png" alt="✘" width="20">
+                                <img src="images/dotsIcon.png" alt="..." class="ms-2" width="18">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <!-- Card 3 -->
+                          <div class="card p-3 mb-3">
+                            <div class="row">
+                              <div class="col">
+                                <div class="title secondary-text">Date</div>
+                                <div class="primary-text">26.12.2020</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Type</div>
+                                <div class="primary-text">Follow-Up</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Specialist</div>
+                                <div class="primary-text">John Albert</div>
+                              </div>
+                              <div class="col text-end">
+                                <span class="badge canceled">Canceled</span>
+                                <img src="images/dotsIcon.png" alt="..." class="ms-2" width="18">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <!-- Card 4 -->
+                          <div class="card p-3 mb-3">
+                            <div class="row">
+                              <div class="col">
+                                <div class="title secondary-text">Date</div>
+                                <div class="primary-text">26.12.2020</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Type</div>
+                                <div class="primary-text">Follow-Up</div>
+                              </div>
+                              <div class="col">
+                                <div class="title secondary-text">Specialist</div>
+                                <div class="primary-text">John Albert</div>
+                              </div>
+                              <div class="col text-end">
+                                <span class="badge canceled">Canceled</span>
+                                <img src="images/dotsIcon.png" alt="..." class="ms-2" width="18">
+                              </div>
+                            </div>
+                          </div>
+                  
+                        </div>
+                      </div>
+                        </div>
+                     
+                    </div>
+                </div>
                     </div>
                     
-                    
-                    
-                </div>
             </div>
+        
+            <!-- 2nd Column -->
             <div class="col-4">
                 <div class="card p-3 h-100">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                     <h6 class="fw-bold mb-0">Prescriptions</h6>
                     <!-- Link triggering Modal -->
-                    <a href="#" class="text-primary small" data-bs-toggle="modal" data-bs-target="#medicalPrescription">Add Prescription</a>
+                    <a href="#" class="unique-text" data-bs-toggle="modal" data-bs-target="#medicalPrescription"><img src="images/addPerscription.png" alt="">Add Prescription</a>
                     <!-- Modal -->
             <div class="modal fade" id="medicalPrescription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -477,8 +471,6 @@
                         <h1 class="modal-title title" id="medicalPrescriptionLabel">Medical Prescription Form</h1>
                     </div>
                     
-                    
-           
                     <div class="modal-body">
                         <form class="row g-3">
                             <!-- Patient Name -->
@@ -541,28 +533,28 @@
                             <li>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="secondary-text title">
                                         Date
                                     </div>
-                                    <div class="date">
+                                    <div class="date primary-text">
                                         26.12.2020
                                     </div>
                                 </div>
         
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Symptoms
                                     </div>
-                                    <div class="symptoms">
+                                    <div class="symptoms primary-text">
                                         Dyspepsia
                                     </div>
                                 </div>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Specialty
                                     </div>
-                                    <div class="specialty">
+                                    <div class="specialty primary-text">
                                         GIT
                                     </div>
                                 </div>
@@ -572,28 +564,28 @@
                             <li>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Date
                                     </div>
-                                    <div class="date">
+                                    <div class="date primary-text">
                                         26.12.2020
                                     </div>
                                 </div>
         
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Symptoms
                                     </div>
-                                    <div class="symptoms">
+                                    <div class="symptoms primary-text">
                                         Dyspepsia
                                     </div>
                                 </div>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Specialty
                                     </div>
-                                    <div class="specialty">
+                                    <div class="specialty primary-text">
                                         GIT
                                     </div>
                                 </div>
@@ -603,28 +595,28 @@
                             <li>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Date
                                     </div>
-                                    <div class="date">
+                                    <div class="date primary-text">
                                         26.12.2020
                                     </div>
                                 </div>
         
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Symptoms
                                     </div>
-                                    <div class="symptoms">
+                                    <div class="symptoms primary-text">
                                         Dyspepsia
                                     </div>
                                 </div>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Specialty
                                     </div>
-                                    <div class="specialty">
+                                    <div class="specialty primary-text">
                                         GIT
                                     </div>
                                 </div>
@@ -634,28 +626,28 @@
                             <li>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Date
                                     </div>
-                                    <div class="date">
+                                    <div class="date primary-text">
                                         26.12.2020
                                     </div>
                                 </div>
         
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Symptoms
                                     </div>
-                                    <div class="symptoms">
+                                    <div class="symptoms primary-text">
                                         Dyspepsia
                                     </div>
                                 </div>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Specialty
                                     </div>
-                                    <div class="specialty">
+                                    <div class="specialty primary-text">
                                         GIT
                                     </div>
                                 </div>
@@ -665,28 +657,28 @@
                             <li>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Date
                                     </div>
-                                    <div class="date">
+                                    <div class="date primary-text">
                                         26.12.2020
                                     </div>
                                 </div>
         
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Symptoms
                                     </div>
-                                    <div class="symptoms">
+                                    <div class="symptoms primary-text">
                                         Dyspepsia
                                     </div>
                                 </div>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Specialty
                                     </div>
-                                    <div class="specialty">
+                                    <div class="specialty primary-text">
                                         GIT
                                     </div>
                                 </div>
@@ -696,28 +688,28 @@
                             <li>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Date
                                     </div>
-                                    <div class="date">
+                                    <div class="date primary-text">
                                         26.12.2020
                                     </div>
                                 </div>
         
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Symptoms
                                     </div>
-                                    <div class="symptoms">
+                                    <div class="symptoms primary-text">
                                         Dyspepsia
                                     </div>
                                 </div>
                                 
                                 <div class="cell">
-                                    <div class="title">
+                                    <div class="title secondary-text">
                                         Specialty
                                     </div>
-                                    <div class="specialty">
+                                    <div class="specialty primary-text">
                                         GIT
                                     </div>
                                 </div>
