@@ -1,3 +1,16 @@
+:root {
+    --primary-color: #00A8B5;
+    --basic: #212529;
+    --orange: #F7912C;
+    --green: #0FDC67;
+    --red: #D20013;
+    --light-grey: #999A9D;
+    --dark-grey: #666666;
+    --white: #FFFFFF;
+    --bg-color:#f7f7f7;
+    --hover-color: #0DE3F41A;
+}
+
 .card {
     border: none;
     border-radius: 10px;
@@ -83,4 +96,70 @@ font-size: 0.85rem;
     gap: 30px;
   }
 
-  
+  .modal-header {
+    border-bottom:0;
+  }
+
+  .modal-footer {
+    border-top: 0;
+  }
+
+  .modal-dialog {
+    max-width: 390px;
+    max-height: 380px;
+  }
+
+  .modal-body .content {
+    border: 3px dashed teal;
+  }
+
+.modal .btn-cancel {
+    border: 1px solid var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 3px 28px;
+}
+
+.modal .modal-link {
+    color: var(--primary-color);
+    margin-top: 10%;
+}
+
+.modal .btn-upload {
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 3px 28px;
+}
+
+.modal .title{
+    font-size: 14px;
+    color: var(--basic);
+}
+
+.modal .sub-title {
+    font-size: 14px;
+    color: var(--light-grey);
+}
+
+.modal-header .btn-close {
+    border: 1px solid var(--primary-color);
+    font-size: 10px;
+}
+
+
+label {
+    color: var(--basic);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+input::placeholder {
+    font-size: 10px;
+}
+
+input[type=text],
+input[type=number],
+input[type=date] {
+    border: 1px solid var(--primary-color);
+}
