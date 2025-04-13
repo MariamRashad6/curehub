@@ -14,7 +14,7 @@
 
 /* * General Styles * */
 body {
-font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 background-color: var(--bg-color);
 }
 
@@ -27,6 +27,9 @@ a {
 .card {
     border: none;
 }
+
+
+  
 
 /** Side bar **/
 
@@ -280,3 +283,181 @@ overflow-x: auto;
     background-color: #00acc1;
     color: white;
   }
+
+
+.confirm {
+  background-color: #29C36A33;
+  color: #29C36A;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+.canceled {
+  background-color: #F7F7F7;
+  color: #999A9D;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+.badge {
+  display: inline-block;
+  font-size: 12px; /* Adjust font size as needed */
+  text-align: center;
+  padding: 6px 12px; /* Same padding for both */
+  border-radius: 12px;
+  min-width: 110px; /* Ensure a minimum width for both badges */
+  line-height: 1.2; /* Align text vertically */
+}
+
+.schedule-pane {
+  background-color: var(--bg-color);
+}
+
+
+/* Calendar container */
+.flatpickr-calendar.inline {
+  display: block;
+  top: 7%;
+  position: absolute;
+  border-radius: 0;
+}
+/* Popover calendar styling*/
+.calendar-container {
+  position: absolute;
+  z-index: 9999;
+  border: 1px solid #e3e3e3;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Fade only the schedule area */
+.schedule-section.faded {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Flatpickr theming to match design */
+.flatpickr-calendar {
+  z-index: 99999;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0;
+}
+
+.flatpickr-innerContainer {
+  background-color: var(--white);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+/* 🗓️ Calendar container */
+.flatpickr-calendar {
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  width: auto;
+  min-width: 280px;
+  z-index: 9999 !important;
+  border-radius: 0;
+}
+
+.flatpickr-month {
+  padding: 0;
+  color: var(--primary-color);
+}
+
+/* 📅 Header (month & arrows) */
+.flatpickr-months {
+  background-color: var(--white);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  margin-bottom: 3%;
+  
+}
+
+.flatpickr-current-month {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.flatpickr-prev-month, .flatpickr-next-month {
+  color: #007bff;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+/* Days grid */
+.flatpickr-days {
+  padding: 8px;
+  gap: 5px;
+}
+
+.flatpickr-weekdays {
+    background-color: var(--white);
+    font-weight: 600;
+    border: none;
+}
+/* Day cells */
+.flatpickr-day {
+  font-size: 12px;
+  border-radius: 0px;
+  height: 36px;
+  line-height: 36px;
+  margin: 2px;
+  width: 36px;
+  font-size: 0.9rem;
+}
+
+.flatpickr-day:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Selected day */
+
+.flatpickr-day.selected.startRange.endRange, 
+.flatpickr-day.startRange.startRange.endRange, 
+.flatpickr-day.endRange.startRange.endRange {
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  
+}
+
+
+
+/* Range in between */
+.flatpickr-day.inRange {
+  background-color: #cfe2ff;
+  color: var(--primary-color);
+}
+
+/* Disabled days */
+.flatpickr-day.disabled,
+.flatpickr-day.notAllowed {
+  color: #ccc;
+  cursor: not-allowed;
+  background-color: transparent !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+  .flatpickr-calendar {
+    font-size: 14px;
+    min-width: 250px;
+  }
+  .flatpickr-day {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+
+
