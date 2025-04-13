@@ -11,10 +11,6 @@
     --hover-color: #0DE3F41A;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 
 .secondary-text {
     color: var(--light-grey);
@@ -274,3 +270,12 @@ body {
       width: 100%;
     }
   }
+
+  /** Search Bar **/
+.search-input {
+  max-width: 495px;
+  }
+
+
+
+  

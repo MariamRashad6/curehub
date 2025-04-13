@@ -1,3 +1,4 @@
+// Tables
 document.addEventListener('DOMContentLoaded', () => {
     const requestData = [
       { name: 'Sarah Lawson', gender: 'Female', dept: 'GIT', doctor: 'John Albert', time: '1:00 PM', date: '20 Nov, 2024' },
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
+  // Calendar
   const calendarTrigger = document.getElementById("calendarTrigger");
   const calendarInput = document.getElementById("calendarInput");
   const scheduleSection = document.querySelector(".schedule-section");

@@ -1,6 +1,3 @@
-<!-- TODO:
- Add Font-->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cure Hub</title>
 
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -28,59 +26,86 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="appointmentStyle.css" />
+    <link rel="stylesheet" href="styles/basicStyles.css" />
+    <link rel="stylesheet" href="styles/appointmentStyle.css" />
 </head>
 
 
 
 
 <body>
-<div class="d-flex ">
+<div class="container-fluid">
+  <div class="row">
 <!-- Sidebar -->
-<aside class="sidebar p-3 pe-0">
-    <div class="d-flex align-items-center mb-4">
+<aside class="col-lg-3 col-xl-2 sidebar position-fixed top-0 start-0 vh-100 p-0 d-none d-lg-block pe-0">
+  <div class="mb-4 p-4">
     <img src="images/Logo.png" alt="CureHub Logo" height="45" />
-    </div>
-    <ul class="nav flex-column gap-3">
-    <li class="nav-item"><i class="fa fa-chart-line me-2"></i><a href="index.html">Dashboard</a></li>
-    <li class="nav-item active"><i class="fa fa-calendar me-2"></i><a href="appointments.html">Appointments</a></li>
-    <li class="nav-item"><i class="fa fa-user-injured me-2"></i><a href="patients.html">Patients</a></li>
-    <li class="nav-item"><i class="fa fa-cog me-2"></i>Settings</li>
-    <li class="mt-5 pt-5"><div class="theme-switch me-3">
-        <div class="theme-option active">
-            <i class="fa-solid fa-sun"></i>
-            Light
-        </div>
-        <div class="theme-option dark">
-            <i class="fa-regular fa-moon"></i>
-            Dark
-        </div>
-        </div></li>
-    </ul>
-    
+  </div>
+  <ul class="nav flex-column gap-2 pt-3">
+
+    <li class="nav-item">
+      <a href="index.html" class="nav-link d-flex align-items-center">
+        <img src="images/Dashboardicon.svg" alt="" height="21"> Dashboard
+      </a>
+    </li>
+
+    <li class="nav-item active">
+      <a href="appointments.html" class="nav-link d-flex align-items-center">
+        <img src="images/Appointmentsicon.svg" alt="" height="21">Appointments
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="patients.html" class="nav-link d-flex align-items-center">
+        <img src="images/patienticon.svg" alt="">Patients
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link d-flex align-items-center">
+        <img src="images/Settingsicon.svg" alt="" height="21">
+          Settings
+      </a>
+    </li>
+
+    <li class="mt-5 pt-5"><div class="theme-switch me-3 ms-4">
+      <div class="theme-option active">
+          <i class="fa-solid fa-sun"></i>
+          Light
+      </div>
+      <div class="theme-option dark">
+          <i class="fa-regular fa-moon"></i>
+          Dark
+      </div>
+      </div></li>
+
+  </ul>
 </aside>
 
+
 <!-- Main Content -->
-<main class="main-content">
+<main class="col-12 col-lg-9  col-xl-10 main-content ps-0 pe-0">
     <!-- * Upper Tab -->
-    <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
-    <input type="text" class="form-control search-input" placeholder="Search here...." />
-    <div class="d-flex align-items-center me-4">
-        <div class="d-flex align-items-center me-5">
-            <img class="me-3" src="images/Message.png" alt="">
-            <img class="me-3" src="images/Notification icon.png" alt="">
-            <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
-            <div class="ms-3">
-            <strong>Dr. Oliver Widson</strong>
-            <div class="text-muted small">Manager</div>
-            </div>
-        </div>
-        
-        <img class="ms-2" src="images/arrowdown.png" alt="">
-    </div>
+    <div class="sticky-top bg-white py-1 px-4">
+      <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
+          <input type="text" class="form-control search-input" placeholder="Search here...." />
+          <div class="d-flex align-items-center me-4">
+              <div class="d-flex align-items-center me-5">
+                  <img class="me-3" src="images/Message.png" alt="">
+                  <img class="me-3" src="images/Notification icon.png" alt="">
+                  <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
+                  <div class="ms-3">
+                  <div class="primary-text">Dr. Oliver Widson</div>
+                  <div class="secondary-text">Manager</div>
+                  </div>
+              </div>
+              
+              <img class="ms-2" src="images/arrowdown.png" alt="">
+          </div>
+          </div>
     </div>
 
-    <div class="main container p-3">
+    <div class="main container p-4">
 
         
     <div class="p-3">
@@ -97,17 +122,17 @@
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab">
+            <button class="nav-link " id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab">
               Appointments List
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="doctor-tab" data-bs-toggle="tab" data-bs-target="#doctor" type="button" role="tab">
+            <button class="nav-link " id="doctor-tab" data-bs-toggle="tab" data-bs-target="#doctor" type="button" role="tab">
               Doctor List
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="sched-tab" data-bs-toggle="tab" data-bs-target="#sched" type="button" role="tab">
+            <button class="nav-link " id="sched-tab" data-bs-toggle="tab" data-bs-target="#sched" type="button" role="tab">
               Doctor Schedule
             </button>
           </li>
@@ -121,7 +146,7 @@
             <option value="date">Date</option>
         </select>
           <button class="btn btn-info btn-sm text-white">
-            <i class="fa fa-plus me-1"></i> Add New
+            <img src="images/addNewIcon.png" alt="" class="me-2">Add New
           </button>
         </div>
       
@@ -217,10 +242,10 @@
         <div class="flex justify-content-between align-items-center mb-3">
           <!-- Button Calendar -->
 <!-- Button Trigger -->
-<button id="calendarTrigger" class="btn btn-info text-white">
-  <i class="fa-regular fa-calendar me-2"></i> January
+<button id="calendarTrigger" class="btn primary-btn p-2 px-3">
+   January <i class="fa-regular fa-calendar me-2"></i>
 </button>
-<button class="btn btn-outline-secondary"><img src="images/editIcon.png" alt="" class="me-1">Edit</button>
+<button class="btn secondary-btn ms-1 edit"><img src="images/editIconBlack.png" alt="" class="me-2 py-2 px-0">Edit</button>
 <!-- Calendar Popover (hidden initially) -->
 <input type="text" id="calendarInput" class="form-control visually-hidden" />
 
@@ -343,13 +368,13 @@
     </div>
 
 </main>
-
+</div>
 </div>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="appointmentscript.js"></script>
+<script src="scripts/appointmentscript.js"></script>
 </body>
 </html>

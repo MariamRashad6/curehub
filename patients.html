@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cure Hub</title>
 
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -19,8 +20,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="patients.css"/>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/basicStyles.css" />
+    <link rel="stylesheet" href="styles/patients.css"/>
 </head>
 
 
@@ -30,16 +32,38 @@
 <div class="container-fluid ">
     <div class="row">
 <!-- Sidebar -->
-<aside class="col-lg-3 col-xl-2 sidebar position-fixed top-0 start-0 vh-100 p-3 d-none d-lg-block">
-    <div class="mb-4">
-    <img src="images/Logo.png" alt="CureHub Logo" height="45" />
+<aside class="col-lg-3 col-xl-2 sidebar position-fixed top-0 start-0 vh-100 p-0 d-none d-lg-block pe-0">
+    <div class="mb-4 p-4">
+      <img src="images/Logo.png" alt="CureHub Logo" height="45" />
     </div>
-    <ul class="nav flex-column gap-3">
-    <li class="nav-item"><i class="fa fa-chart-line me-2"></i><a href="index.html">Dashboard</a></li>
-    <li class="nav-item"><i class="fa fa-calendar me-2"></i><a href="appointments.html">Appointments</a></li>
-    <li class="nav-item active"><i class="fa fa-user-injured me-2"></i><a href="patients.html">Patients</a></li>
-    <li class="nav-item"><i class="fa fa-cog me-2"></i>Settings</li>
-    <li class="mt-5 pt-5"><div class="theme-switch me-3">
+    <ul class="nav flex-column gap-2 pt-3">
+  
+      <li class="nav-item">
+        <a href="index.html" class="nav-link d-flex align-items-center">
+          <img src="images/Dashboardicon.svg" alt="" height="21"> Dashboard
+        </a>
+      </li>
+  
+      <li class="nav-item ">
+        <a href="appointments.html" class="nav-link d-flex align-items-center">
+          <img src="images/Appointmentsicon.svg" alt="" height="21">Appointments
+        </a>
+      </li>
+  
+      <li class="nav-item active">
+        <a href="patients.html" class="nav-link d-flex align-items-center">
+          <img src="images/patientIconActive.png" alt="">Patients
+        </a>
+      </li>
+  
+      <li class="nav-item">
+        <a href="#" class="nav-link d-flex align-items-center">
+          <img src="images/Settingsicon.svg" alt="" height="21">
+            Settings
+        </a>
+      </li>
+  
+      <li class="mt-5 pt-5"><div class="theme-switch me-3 ms-4">
         <div class="theme-option active">
             <i class="fa-solid fa-sun"></i>
             Light
@@ -49,14 +73,14 @@
             Dark
         </div>
         </div></li>
+  
     </ul>
-    
-</aside>
+  </aside>
 
 <!-- Main Content -->
-<main class="col-12 col-lg-9  col-xl-10  main-content">
+<main class="col-12 col-lg-9  col-xl-10  main-content ps-0 pe-0">
     <!-- * Upper Tab -->
-     <div class="sticky-top bg-white py-2 px-4">
+    <div class="sticky-top bg-white py-1 px-4">
         <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
             <input type="text" class="form-control search-input" placeholder="Search here...." />
             <div class="d-flex align-items-center me-4">
@@ -65,15 +89,15 @@
                     <img class="me-3" src="images/Notification icon.png" alt="">
                     <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
                     <div class="ms-3">
-                    <strong>Dr. Oliver Widson</strong>
-                    <div class="text-muted small">Manager</div>
+                    <div class="primary-text">Dr. Oliver Widson</div>
+                    <div class="secondary-text">Manager</div>
                     </div>
                 </div>
                 
                 <img class="ms-2" src="images/arrowdown.png" alt="">
             </div>
             </div>
-     </div>
+      </div>
     
 
     
@@ -772,6 +796,6 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="scripts/patients.js"></script>
 </body>
 </html>
