@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
@@ -26,10 +27,11 @@
 
 
 <body>
-<div class="d-flex ">
+<div class="container-fluid ">
+    <div class="row">
 <!-- Sidebar -->
-<aside class="sidebar p-3 pe-0">
-    <div class="d-flex align-items-center mb-4">
+<aside class="col-lg-3 col-xl-2 sidebar position-fixed top-0 start-0 vh-100 p-3 d-none d-lg-block">
+    <div class="mb-4">
     <img src="images/Logo.png" alt="CureHub Logo" height="45" />
     </div>
     <ul class="nav flex-column gap-3">
@@ -52,24 +54,27 @@
 </aside>
 
 <!-- Main Content -->
-<main class="main-content">
+<main class="col-12 col-lg-9  col-xl-10  main-content">
     <!-- * Upper Tab -->
-    <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
-    <input type="text" class="form-control search-input" placeholder="Search here...." />
-    <div class="d-flex align-items-center me-4">
-        <div class="d-flex align-items-center me-5">
-            <img class="me-3" src="images/Message.png" alt="">
-            <img class="me-3" src="images/Notification icon.png" alt="">
-            <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
-            <div class="ms-3">
-            <strong>Dr. Oliver Widson</strong>
-            <div class="text-muted small">Manager</div>
+     <div class="sticky-top bg-white py-2 px-4">
+        <div class="d-flex justify-content-between align-items-center mb-4 mt-3 container">
+            <input type="text" class="form-control search-input" placeholder="Search here...." />
+            <div class="d-flex align-items-center me-4">
+                <div class="d-flex align-items-center me-5">
+                    <img class="me-3" src="images/Message.png" alt="">
+                    <img class="me-3" src="images/Notification icon.png" alt="">
+                    <img src="images/userImagepng.png" alt="User" class="rounded-circle" width="40" />
+                    <div class="ms-3">
+                    <strong>Dr. Oliver Widson</strong>
+                    <div class="text-muted small">Manager</div>
+                    </div>
+                </div>
+                
+                <img class="ms-2" src="images/arrowdown.png" alt="">
             </div>
-        </div>
-        
-        <img class="ms-2" src="images/arrowdown.png" alt="">
-    </div>
-    </div>
+            </div>
+     </div>
+    
 
     
 
@@ -82,7 +87,7 @@
               <span class="secondary-text me-1"><img src="images/arrowIcon.png" alt=""></span>
               <span class="secondary-text">Sarah Lawson</span>
             </div>
-          
+
             <!-- Action buttons -->
             <div class="d-flex align-items-center">
               <button class="btn me-2 p-2  d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
@@ -92,13 +97,13 @@
                 <img src="images/editIcon.png" alt="" class="me-2"> Edit
               </button>
             </div>
-          </div>
+        </div>
 
         <!-- 1st row -->
         <div class="row g-3 d-flex align-items-stretch mb-3">
             
             <!-- Column 1: Patient Info -->
-            <div class="col-md-3">
+            <div class="col-lg-3">
             <div class="card p-3 text-center h-100">
                 <div class="text-center pt-3">
                     <img src="images/patient.png" class="rounded-circle mb-2" width="80" alt="patient avatar">
@@ -124,7 +129,7 @@
             </div>
     
             <!-- Column 2: Patient Details -->
-            <div class="col-md-5 ps-0">
+            <div class="col-lg-5 ps-0">
             <div class="card p-3 h-100">
                 <div class="row p-2 gy-4 mt-1">
                 <div class="col-4">
@@ -164,7 +169,7 @@
             </div>
     
             <!-- Column 3: Documents -->
-            <div class="col-md-4">
+            <div class="col-lg-4">
             <div class="card p-3 h-100">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 <h6 class="fw-bold mb-0">Documents</h6>
@@ -286,7 +291,7 @@
         <!-- 2nd row -->
         <div class="row g-3 d-flex align-items-stretch mb-3">
             <!-- 1st Column -->
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="card p-3 h-100">
                   <!-- Header -->
                   <div class="d-flex justify-content-between align-items-center mb-3">
@@ -453,7 +458,7 @@
             </div>
         
             <!-- 2nd Column -->
-            <div class="col-4">
+            <div class="col-lg-4">
                 <div class="card p-3 h-100">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                     <h6 class="fw-bold mb-0">Prescriptions</h6>
@@ -462,7 +467,7 @@
                     <!-- Modal -->
             <div class="modal fade" id="medicalPrescription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content prescription">
                     <div class="modal-header text-center flex-column ">
                         
 
@@ -515,7 +520,7 @@
                               </div>
                           </form>   
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer d-flex justify-content-between">
                     <button type="button" class="btn btn-upload">Save</button>
                     <div>
                         <label for="inputSignature" class="form-label">Doctor Signature</label>
@@ -715,6 +720,37 @@
                                 </div>
                                 
                             </li>
+
+                            <li>
+                                
+                                <div class="cell">
+                                    <div class="title secondary-text">
+                                        Date
+                                    </div>
+                                    <div class="date primary-text">
+                                        26.12.2020
+                                    </div>
+                                </div>
+        
+                                <div class="cell">
+                                    <div class="title secondary-text">
+                                        Symptoms
+                                    </div>
+                                    <div class="symptoms primary-text">
+                                        Dyspepsia
+                                    </div>
+                                </div>
+                                
+                                <div class="cell">
+                                    <div class="title secondary-text">
+                                        Specialty
+                                    </div>
+                                    <div class="specialty primary-text">
+                                        GIT
+                                    </div>
+                                </div>
+                                
+                            </li>
                             </ul>
                             </div>
                     </div>
@@ -730,7 +766,7 @@
 
     </div>
 </main>
-
+</div>
 </div>
 
 <!-- Scripts -->

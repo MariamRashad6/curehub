@@ -11,6 +11,11 @@
     --hover-color: #0DE3F41A;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
 .secondary-text {
     color: var(--light-grey);
     font-size: 14px;
@@ -20,7 +25,7 @@
 
 .primary-text {
     color: var(--basic);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     margin-top: 5%;
 }
@@ -48,7 +53,7 @@
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.05);
-  }
+}
 
 
   .btn-primary {
@@ -158,6 +163,7 @@
 .modal .title{
     font-size: 14px;
     color: var(--basic);
+    font-weight: 600;
 }
 
 .modal .sub-title {
@@ -171,20 +177,21 @@
 }
 
 
-form label {
+.form-label {
     color: var(--basic);
     font-size: 12px;
     font-weight: 600;
 }
 
-form input::placeholder {
+.prescription .form-control::placeholder {
     font-size: 10px;
 }
 
-form input[type=text],
-form input[type=number],
-form input[type=date] {
+.prescription .form-control[type=text],
+.prescription .form-control[type=number],
+.prescription .form-control[type=date] {
     border: 1px solid var(--primary-color);
+    font-size: 12px;
 }
 
 
@@ -244,4 +251,26 @@ form input[type=date] {
     left: 26px;
     top: 48px;
     z-index: 2;
+  }
+
+
+  .sidebar {
+    width: 220px;
+    background-color: #fff;
+    z-index: 1030;
+  }
+  .main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+  @media (max-width: 991.98px) {
+    .sidebar {
+      position: relative !important;
+      width: 100%;
+      height: auto;
+    }
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+    }
   }
