@@ -214,28 +214,7 @@ overflow-x: auto;
   }
 
 
-.confirm {
-  background-color: #29C36A33;
-  color: #29C36A;
-  padding: 6px 12px;
-  border-radius: 12px;
-}
 
-.canceled {
-  background-color: #F7F7F7;
-  color: #999A9D;
-  padding: 6px 12px;
-  border-radius: 12px;
-}
-.badge {
-  display: inline-block;
-  font-size: 12px; /* Adjust font size as needed */
-  text-align: center;
-  padding: 6px 12px; /* Same padding for both */
-  border-radius: 12px;
-  min-width: 110px; /* Ensure a minimum width for both badges */
-  line-height: 1.2; /* Align text vertically */
-}
 
 .schedule-pane {
   background-color: var(--bg-color);

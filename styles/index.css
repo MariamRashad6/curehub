@@ -118,7 +118,7 @@ margin-top: 10px;
 }
 
 
-/* * Donut Chart * */
+/* * List * */
 .department-list li {
 display: flex;
 align-items: center;
@@ -165,11 +165,12 @@ opacity: 1;
 font-weight: 600;
 }
 
+/* donut chart */
 .chartjs-tooltip {
     position: absolute;
     background: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    padding: 10px 14px;
+    padding: 0;
     border-radius: 12px;
     font-size: 12px;
     font-weight: 500;
@@ -328,15 +329,11 @@ font-weight: bold;
     width: 4px;
   }
   
-  .activity-scroll-container::-webkit-scrollbar-thumb {
+.activity-scroll-container::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-  }
+}
   
   .activity-scroll-container::-webkit-scrollbar-track {
     background: transparent;
-  }
-  
-
-
-  /*  */
+}
